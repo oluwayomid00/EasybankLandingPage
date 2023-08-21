@@ -1,0 +1,388 @@
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.web {
+  display: flex;
+  flex-direction: column;
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  padding: 10px 165px;
+}
+header div ul {
+  list-style-type: none;
+  display: flex;
+}
+header div ul li a {
+  text-decoration: none;
+  margin: 15px;
+  color: hsl(233, 8%, 62%);
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+header div button {
+  border-radius: 30px;
+  border: none;
+  background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  height: 45px;
+  width: 165px;
+  color: white;
+}
+header .hamburger {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.top {
+  background-color: hsl(0, 0%, 98%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 660px;
+  overflow: hidden;
+}
+.top .head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 165px;
+  padding-right: 5px;
+  width: 43%;
+}
+.top .head h1 {
+  font-size: 3em;
+  font-weight: 100;
+  color: hsl(233, 26%, 24%);
+  margin: 0;
+  padding: 0;
+}
+.top .head p {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  line-height: 1.5;
+  color: hsl(233, 8%, 62%);
+}
+.top .head button {
+  border-radius: 30px;
+  border: none;
+  background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  height: 45px;
+  width: 165px;
+  color: white;
+}
+.top .picture {
+  width: 57%;
+}
+.top .picture img {
+  transform: translateY(-70px);
+}
+.top .img2 {
+  position: absolute;
+  top: -1%;
+  left: 55.8%;
+}
+
+.moreinfo {
+  background-color: hsl(220, 16%, 96%);
+  display: flex;
+  flex-direction: column;
+  padding-left: 165px;
+  justify-content: center;
+  min-height: 660px;
+}
+.moreinfo .why {
+  width: 50%;
+}
+.moreinfo .why h2 {
+  font-size: 2.3em;
+  font-weight: 100;
+  color: hsl(233, 26%, 24%);
+}
+.moreinfo .why p {
+  line-height: 1.5;
+  color: hsl(233, 8%, 62%);
+  padding-bottom: 50px;
+}
+.moreinfo .reasons {
+  display: flex;
+  justify-content: space-between;
+  gap: 27.5px;
+  padding-right: 150px;
+}
+.moreinfo .reasons div {
+  padding: 0;
+}
+.moreinfo .reasons img {
+  padding-bottom: 15px;
+}
+.moreinfo .reasons h3 {
+  font-size: 1.3em;
+  font-weight: 100;
+  color: hsl(233, 26%, 24%);
+}
+.moreinfo .reasons p {
+  font-size: 0.86em;
+  line-height: 1.6;
+  color: hsl(233, 8%, 62%);
+}
+
+.article {
+  background-color: hsl(0, 0%, 98%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  min-height: 660px;
+}
+.article .subtopic h2 {
+  font-size: 2.5em;
+  font-weight: 100;
+  color: hsl(233, 26%, 24%);
+}
+.article .cards {
+  display: flex;
+  gap: 30px;
+}
+.article .cards div {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.article .cards div img {
+  max-width: 100%;
+  min-height: 200px;
+  display: block;
+}
+.article .cards div div {
+  padding: 23px;
+}
+.article .cards div div h4 {
+  margin: 10px 0px;
+  padding-right: 25px;
+  font-size: 0.9em;
+  font-weight: 100;
+  color: hsl(233, 26%, 24%);
+}
+.article .cards div div p {
+  padding: 0;
+  margin: 0;
+  font-size: 0.75em;
+  line-height: 1.5;
+  color: hsl(233, 8%, 62%);
+}
+.article .cards div div .small {
+  font-size: 0.5em;
+}
+
+footer {
+  background-color: hsl(233, 26%, 24%);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 150px;
+  min-height: 150px;
+}
+footer .right {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .right .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+footer .right .logo svg {
+  padding-top: 10px;
+}
+footer .right .logo .icons {
+  display: flex;
+  justify-content: space-between;
+}
+footer .right .aboutus {
+  padding: 20px 0px;
+}
+footer .right .aboutus p {
+  font-size: 0.9em;
+  color: hsl(220, 16%, 96%);
+}
+footer .left {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+footer .left button {
+  border-radius: 30px;
+  border: none;
+  background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  height: 45px;
+  width: 150px;
+  color: white;
+}
+footer .left p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: hsl(233, 8%, 62%);
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    align-items: center;
+  }
+  .web {
+    background-color: white;
+    width: 375px;
+  }
+  header {
+    padding: 20px 20px;
+  }
+  header div ul {
+    position: fixed;
+    left: -100%;
+    transition: 0.3s;
+  }
+  header div button {
+    position: fixed;
+    left: -100%;
+    transition: 0.3s;
+  }
+  header .hamburger {
+    display: block;
+  }
+  .top {
+    flex-direction: column-reverse;
+  }
+  .top .head {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: start;
+  }
+  .top .head h1 {
+    font-size: 2.1em;
+  }
+  .top .head p {
+    font-size: 0.8em;
+    padding: 5px 20px;
+  }
+  .top .head button {
+    margin-top: 10px;
+  }
+  .top .picture {
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+  }
+  .top .picture img {
+    content: url("images/bg-intro-mobile.svg");
+    height: 100%;
+    width: 100%;
+    transform: translateY(-20px);
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .top .img2 {
+    width: 90%;
+    top: -55px;
+    left: 50%;
+    margin-left: -170px;
+  }
+  .moreinfo {
+    padding: 40px 25px;
+    align-items: center;
+    text-align: center;
+  }
+  .moreinfo .why {
+    width: 100%;
+  }
+  .moreinfo .why h2 {
+    font-size: 1.7em;
+  }
+  .moreinfo .why p {
+    font-size: 0.8em;
+  }
+  .moreinfo .reasons {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .moreinfo .reasons div {
+    width: 100%;
+  }
+  .moreinfo .reasons h3 {
+    font-size: 1em;
+  }
+  .moreinfo .reasons p {
+    font-size: 0.8em;
+  }
+  .article {
+    padding: 50px 0px;
+    height: 100%;
+    align-items: center;
+  }
+  .article .subtopic h2 {
+    font-size: 1.7em;
+  }
+  .article .cards {
+    flex-direction: column;
+    width: 85%;
+  }
+  .article .cards div div h4 {
+    font-size: 0.83em;
+  }
+  .article .cards div div p {
+    font-size: 0.7em;
+  }
+  footer {
+    flex-direction: column;
+    padding: 0;
+    justify-content: space-around;
+  }
+  footer .right {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer .right .logo {
+    width: 50%;
+  }
+  footer .right .logo svg {
+    padding: 30px 0px;
+  }
+  footer .right .aboutus {
+    padding: 0;
+  }
+  footer .right .aboutus p {
+    font-size: 0.8em;
+  }
+  footer .left {
+    align-items: center;
+  }
+  footer .left button {
+    margin: 20px;
+  }
+  footer .left p {
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+  }
+}/*# sourceMappingURL=EasybankLandingPage.css.map */
