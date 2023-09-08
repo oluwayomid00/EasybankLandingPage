@@ -14,6 +14,14 @@ body {
   overflow: hidden;
 }
 
+.close {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 header {
   background-color: white;
   display: flex;
@@ -25,6 +33,7 @@ header {
 header div ul {
   list-style-type: none;
   display: flex;
+  position: relative;
 }
 header div ul li a {
   text-decoration: none;
@@ -33,13 +42,23 @@ header div ul li a {
   font-size: 0.8em;
   font-weight: lighter;
 }
+header div ul li a:hover {
+  color: hsl(233, 8%, 40%);
+}
 header div button {
   border-radius: 30px;
   border: none;
   background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   height: 45px;
   width: 165px;
+  transition: 0.7s;
+}
+header div button a {
   color: white;
+}
+header div button:hover {
+  transform: scale(1.09);
+  cursor: pointer;
 }
 header .hamburger {
   display: none;
@@ -81,7 +100,14 @@ header .hamburger {
   background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   height: 45px;
   width: 165px;
+  transition: 0.7s;
+}
+.top .head button a {
   color: white;
+}
+.top .head button:hover {
+  transform: scale(1.09);
+  cursor: pointer;
 }
 .top .picture {
   width: 57%;
@@ -127,6 +153,11 @@ header .hamburger {
 }
 .moreinfo .reasons img {
   padding-bottom: 15px;
+  transition: 0.5s;
+}
+.moreinfo .reasons img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 .moreinfo .reasons h3 {
   font-size: 1.3em;
@@ -161,6 +192,7 @@ header .hamburger {
   background-color: white;
   border-radius: 5px;
   overflow: hidden;
+  transition: 0.5s;
 }
 .article .cards div img {
   max-width: 100%;
@@ -186,6 +218,10 @@ header .hamburger {
 }
 .article .cards div div .small {
   font-size: 0.5em;
+}
+.article .cards .card:hover {
+  transform: scale(1.09);
+  cursor: pointer;
 }
 
 footer {
@@ -214,11 +250,21 @@ footer .right .logo .icons {
   justify-content: space-between;
 }
 footer .right .aboutus {
-  padding: 20px 0px;
+  height: 100%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-footer .right .aboutus p {
+footer .right .aboutus a {
+  padding: 10px;
+  text-decoration: none;
   font-size: 0.9em;
   color: hsl(220, 16%, 96%);
+}
+footer .right .aboutus a:hover {
+  color: hsl(233, 26%, 15%);
 }
 footer .left {
   display: flex;
@@ -231,8 +277,15 @@ footer .left button {
   border: none;
   background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   height: 45px;
-  width: 150px;
+  width: 165px;
+  transition: 0.7s;
+}
+footer .left button a {
   color: white;
+}
+footer .left button:hover {
+  transform: scale(1.09);
+  cursor: pointer;
 }
 footer .left p {
   font-size: 0.9em;
@@ -244,6 +297,24 @@ footer .left p {
   body {
     align-items: center;
   }
+  .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 0;
+    top: 10%;
+    right: 5%;
+    background-color: hsl(233, 26%, 24%);
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    z-index: 1000;
+    color: white;
+  }
+  .close:hover {
+    cursor: pointer;
+  }
   .web {
     background-color: white;
     width: 375px;
@@ -252,9 +323,21 @@ footer .left p {
     padding: 20px 20px;
   }
   header div ul {
-    position: fixed;
-    left: -100%;
-    transition: 0.3s;
+    padding: 20px 0px;
+    margin: 0;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    right: -100%;
+    transition: 0.7s;
+    z-index: 900;
   }
   header div button {
     position: fixed;
@@ -263,6 +346,9 @@ footer .left p {
   }
   header .hamburger {
     display: block;
+  }
+  header .hamburger:hover {
+    cursor: pointer;
   }
   .top {
     flex-direction: column-reverse;
@@ -291,7 +377,7 @@ footer .left p {
     background-size: cover;
   }
   .top .picture img {
-    content: url("images/bg-intro-mobile.svg");
+    content: url("/images/bg-intro-mobile.svg");
     height: 100%;
     width: 100%;
     transform: translateY(-20px);
@@ -361,6 +447,7 @@ footer .left p {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 0;
   }
   footer .right .logo {
     width: 50%;
@@ -370,12 +457,17 @@ footer .left p {
   }
   footer .right .aboutus {
     padding: 0;
+    margin: 0;
   }
   footer .right .aboutus p {
     font-size: 0.8em;
   }
+  footer .right .aboutus .careers {
+    margin-top: 0;
+  }
   footer .left {
     align-items: center;
+    margin-bottom: 50px;
   }
   footer .left button {
     margin: 20px;

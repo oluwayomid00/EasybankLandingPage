@@ -1,5 +1,4 @@
 body{
-
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -15,6 +14,15 @@ body{
     overflow: hidden;
 }
 
+.close{
+    display: none;
+    // top: -100%;
+}
+
+a{
+    text-decoration: none;
+}
+
 header{
     background-color: white;
     display: flex;
@@ -26,6 +34,7 @@ header{
         ul{
             list-style-type: none;
             display: flex;
+            position: relative;
             li{
                 a{
                     text-decoration: none;
@@ -33,6 +42,9 @@ header{
                     color: hsl(233, 8%, 62%);
                     font-size: 0.8em;
                     font-weight: lighter;
+                }
+                a:hover{
+                    color: hsl(233, 8%, 40%);
                 }
             }
         }
@@ -42,9 +54,15 @@ header{
             background-image: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
             height: 45px;
             width: 165px;
-            color: white;
+            a{
+                color: white;
+            }
+            transition: 0.7s;
         }
-
+        button:hover{
+            transform: scale(1.09);
+            cursor: pointer;
+        }
     }
     .hamburger{
         display: none;
@@ -85,7 +103,14 @@ header{
             background-image: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
             height: 45px;
             width: 165px;
-            color: white;
+            a{
+                color: white;
+            }
+            transition: 0.7s;
+        }
+        button:hover{
+            transform: scale(1.09);
+            cursor: pointer;
         }
     }
     .picture{
@@ -131,6 +156,11 @@ header{
         }
         img{
             padding-bottom: 15px;
+            transition: 0.5s;
+        }
+        img:hover{
+            transform: scale(1.2);
+            cursor: pointer;
         }
         h3{
             font-size: 1.3em;
@@ -193,6 +223,11 @@ header{
                     font-size: 0.5em;
                 }
             }
+            transition: 0.5s;
+        }
+        .card:hover{
+            transform: scale(1.09);
+            cursor: pointer;
         }
     }
 }
@@ -207,11 +242,14 @@ footer{
         width: 50%;
         display: flex;
         justify-content: space-between;
+        // border: 1px solid red;
+        // gap: 50px;
         .logo{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             padding: 20px 0px;
+            // border: 1px solid red;
             svg{
                 padding-top: 10px;
             }
@@ -221,10 +259,20 @@ footer{
             }
         }
         .aboutus{
-            padding: 20px 0px;
-            p{
+            height: 100%;
+            min-width: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // border: 1px solid red;
+            a{
+                padding: 10px;
+                text-decoration: none;
                 font-size: 0.9em;
                 color: hsl(220, 16%, 96%);
+            }
+            a:hover{
+                color: hsl(233, 26%, 15%);
             }
         }
     }
@@ -233,13 +281,21 @@ footer{
         flex-direction: column;
         align-items: end;
         justify-content: center;
+        // border: 1px solid red;
         button{
             border-radius: 30px;
             border: none;
             background-image: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
             height: 45px;
-            width: 150px;
-            color: white;
+            width: 165px;
+            a{
+                color: white;
+            }
+            transition: 0.7s;
+        }
+        button:hover{
+            transform: scale(1.09);
+            cursor: pointer;
         }
         p{
             font-size: 0.9em;
@@ -253,7 +309,24 @@ footer{
     body{
         align-items: center;
     }
-    
+    .close{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        padding: 0;
+        top: 10%;
+        right: 5%;
+        background-color: hsl(233, 26%, 24%);
+        height: 25px;
+        width: 25px;
+        border-radius: 100%;
+        z-index: 1000;
+        color: white;
+    }
+    .close:hover{
+        cursor: pointer;
+    }
     .web{
         background-color: white;
         width: 375px;
@@ -263,9 +336,20 @@ footer{
         padding: 20px 20px;
         div{
             ul{
-                position: fixed;
-                left: -100%;
-                transition: 0.3s;
+                padding: 20px 0px;
+                margin: 0;
+                width: 100%;
+                height: fit-content;
+                position: absolute;
+                top: 0;
+                gap: 10px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                right: -100%;
+                transition: 0.7s;
+                z-index: 900;
             }
             button{
                 position: fixed;
@@ -276,6 +360,9 @@ footer{
         }
         .hamburger{
             display: block;
+        }
+        .hamburger:hover{
+            cursor: pointer;
         }
     }
 
@@ -304,7 +391,7 @@ footer{
             height: 50%;
             background-size: cover;
             img{
-                content: url('images/bg-intro-mobile.svg');
+                content: url('/images/bg-intro-mobile.svg');
                 height: 100%;
                 width: 100%;
                 transform: translateY(-20px);
@@ -378,11 +465,15 @@ footer{
         flex-direction: column;
         padding: 0;
         justify-content: space-around;
+        // border: 1px solid red;
         .right{
             width: 100%;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            gap: 0;
+            // justify-content: center;
+            // border: 1px solid red;
             .logo{
                 width: 50%;
                 svg{
@@ -391,13 +482,21 @@ footer{
             }
             .aboutus{
                 padding: 0;
+                margin: 0;
+                // border: 1px solid black;
                 p{
+                    // margin: 5px;
                     font-size: 0.8em;
+                    // border: 1px solid red;
+                }
+                .careers{
+                    margin-top: 0;
                 }
             }
         }
         .left{
             align-items: center;
+            margin-bottom: 50px;
             button{
                 margin: 20px;
             }
