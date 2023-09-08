@@ -1,5 +1,5 @@
 $('.hamburger').click(function () { 
-    $('header div ul').css('top', '0');
+    $('header div ul').addClass('ham');
     // $('header div ul').animate({top: '0'});
     
 });

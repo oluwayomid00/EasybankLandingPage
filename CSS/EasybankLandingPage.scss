@@ -305,6 +305,21 @@ footer{
     }
 }
 
+.ham{
+    padding: 20px 0px;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
 @media only screen and (max-width: 900px) {
     body{
         align-items: center;
@@ -336,20 +351,7 @@ footer{
         padding: 20px 20px;
         div{
             ul{
-                padding: 20px 0px;
-                margin: 0;
-                width: 100%;
-                height: fit-content;
-                position: absolute;
-                top: 0;
-                right: 0;
-                gap: 10px;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                background-color: white;
-                z-index: 900;
-                top: -100%;
+                display: none;
             }
             button{
                 position: fixed;

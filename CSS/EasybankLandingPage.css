@@ -293,6 +293,22 @@ footer .left p {
   color: hsl(233, 8%, 62%);
 }
 
+.ham {
+  padding: 20px 0px;
+  margin: 0;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
 @media only screen and (max-width: 900px) {
   body {
     align-items: center;
@@ -323,21 +339,7 @@ footer .left p {
     padding: 20px 20px;
   }
   header div ul {
-    padding: 20px 0px;
-    margin: 0;
-    width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    position: absolute;
-    top: 0;
-    right: 0;
-    gap: 10px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    z-index: 900;
-    top: -100%;
+    display: none;
   }
   header div button {
     position: fixed;
