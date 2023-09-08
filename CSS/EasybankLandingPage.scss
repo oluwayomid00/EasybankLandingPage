@@ -342,19 +342,18 @@ footer{
                 height: fit-content;
                 position: absolute;
                 top: 0;
+                right: 0;
                 gap: 10px;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 background-color: white;
-                right: -100%;
-                transition: 0.7s;
                 z-index: 900;
+                top: -100%;
             }
             button{
                 position: fixed;
                 left: -100%;
-                transition: 0.3s;
             }
 
         }
@@ -391,7 +390,7 @@ footer{
             height: 50%;
             background-size: cover;
             img{
-                content: url('images/bg-intro-mobile.svg');
+                content: url('/images/bg-intro-mobile.svg');
                 height: 100%;
                 width: 100%;
                 transform: translateY(-20px);
