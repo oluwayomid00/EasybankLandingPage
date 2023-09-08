@@ -305,20 +305,7 @@ footer{
     }
 }
 
-.ham{
-    padding: 20px 0px;
-    margin: 0;
-    width: 100%;
-    height: fit-content;
-    position: absolute;
-    top: 0;
-    right: 0;
-    gap: 10px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-}
+
 
 @media only screen and (max-width: 900px) {
     body{
@@ -345,6 +332,22 @@ footer{
     .web{
         background-color: white;
         width: 375px;
+    }
+
+    .ham{
+        display: flex;
+        padding: 20px 0px;
+        margin: 0;
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        top: 0;
+        right: 0;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
     }
     
     header{

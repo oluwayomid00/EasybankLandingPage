@@ -5,6 +5,6 @@ $('.hamburger').click(function () {
 });
 $('.close').click(function () { 
     // $('header div ul').animate({top: '-100%'}, '0.7s');
-    $('header div ul').css('top', '-100%');
+    $('header div ul').removeClass('ham');
     // $('header div ul').css('position', 'relative');
 });
