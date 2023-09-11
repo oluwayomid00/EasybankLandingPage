@@ -112,8 +112,11 @@ header .hamburger {
 .top .picture {
   width: 57%;
 }
-.top .picture img {
+.top .picture .desk {
   transform: translateY(-70px);
+}
+.top .picture .mob {
+  display: none;
 }
 .top .img2 {
   position: absolute;
@@ -377,8 +380,11 @@ footer .left p {
     height: 50%;
     background-size: cover;
   }
-  .top .picture img {
-    content: url("/images/bg-intro-mobile.svg");
+  .top .picture .desk {
+    display: none;
+  }
+  .top .picture .mob {
+    display: block;
     height: 100%;
     width: 100%;
     transform: translateY(-20px);
